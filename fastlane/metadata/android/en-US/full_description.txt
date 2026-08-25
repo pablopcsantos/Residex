@@ -1,0 +1,14 @@
+<p><strong>Residex</strong> helps candidates follow medical residency selection calendars in one place.</p>
+<h2>Key features</h2>
+<ul>
+<li>Search and filter selections by state and current stage</li>
+<li>See registrations and exams scheduled within the next seven days</li>
+<li>Follow the selections that matter to you and arrange them manually</li>
+<li>View deadlines, fees, exam dates and official links</li>
+<li>Receive configurable local notifications and send a test notification</li>
+<li>Keep a local cache available between synchronizations</li>
+</ul>
+<h2>Data synchronization</h2>
+<p>Residex synchronizes selection data with the service configured by the project. Authorized administrators can sign in to add, update or remove records.</p>
+<h2>Privacy</h2>
+<p>The app contains no advertising or analytics libraries. Notification and selection preferences are stored locally. Administrative credentials are sent only when the user explicitly signs in.</p>

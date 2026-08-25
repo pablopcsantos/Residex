@@ -1,0 +1,25 @@
+{
+  "name": "Residex Android",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "jdkDistro": "ms"
+    }
+  },
+  "remoteEnv": {
+    "ANDROID_SDK_ROOT": "/home/vscode/android-sdk",
+    "ANDROID_HOME": "/home/vscode/android-sdk",
+    "JAVA_HOME": "/usr/local/sdkman/candidates/java/17.0.20-ms",
+    "PATH": "/home/vscode/android-sdk/cmdline-tools/latest/bin:/home/vscode/android-sdk/platform-tools:/usr/local/sdkman/candidates/java/17.0.20-ms/bin:${containerEnv:PATH}"
+  },
+  "postCreateCommand": "bash scripts/setup-android-sdk.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "fwcd.kotlin"
+      ]
+    }
+  }
+}

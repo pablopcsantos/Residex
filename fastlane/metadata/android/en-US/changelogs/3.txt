@@ -1,0 +1,9 @@
+Introduced the Residex Android identity and application icon.
+
+Redesigned the calendar, selections, administration and settings screens for smartphones.
+
+Added labeled bottom navigation, seven-day deadline filters and functional manual ordering.
+
+Added configurable test notifications with permission and delivery feedback.
+
+Improved Android 7.1 compatibility and expanded rule coverage with unit tests.

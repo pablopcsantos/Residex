@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Server-backed caches are recreated by synchronization. -->
+    <exclude domain="database" path="." />
+    <!-- Deduplication history is local and should not follow the user to a new device. -->
+    <exclude domain="sharedpref" path="residency_notification_history.xml" />
+</full-backup-content>
