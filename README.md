@@ -49,12 +49,48 @@ desugaring.
 
 ## Fonte de dados e configuração
 
-O aplicativo inclui uma URL pública padrão para a API do Google Apps Script.
-Ela pode ser alterada e testada na tela **Ajustes**. A sincronização converte o
-envelope retornado pela API em entidades locais e mantém a última cópia válida
-no Room.
+Os dados publicados pelo Residex têm como fonte uma planilha do Google
+Planilhas armazenada no Google Drive. Essa planilha funciona como o banco de
+dados administrado do projeto, mas o aplicativo Android não a acessa
+diretamente. Um projeto do Google Apps Script, implantado como aplicativo web,
+faz a intermediação: lê e altera a planilha e expõe os resultados ao app em
+formato JSON.
 
-O formato geral esperado é:
+O trânsito dos dados ocorre da seguinte forma:
+
+1. os processos seletivos são mantidos na aba `SELEÇÕES` da planilha no Google
+   Drive;
+2. o Google Apps Script lê as linhas da planilha e as transforma em objetos
+   JSON;
+3. o aplicativo consulta a URL pública do Apps Script usando Retrofit e Moshi;
+4. após uma sincronização válida, o app grava os dados em um banco Room no
+   aparelho;
+5. as telas consultam essa cópia local, que continua disponível sem conexão ou
+   quando uma sincronização falha.
+
+Na área administrativa, o caminho também funciona no sentido inverso. Depois
+da autenticação, inclusões, alterações e exclusões são enviadas ao Apps Script
+por requisições `POST`. O script valida a senha administrativa e, quando a
+operação é autorizada, modifica a planilha no Google Drive e devolve ao app a
+lista atualizada. A senha não dá ao aplicativo acesso direto ao Google Drive e
+não é armazenada no aparelho.
+
+~~~text
+Google Planilhas (Google Drive)
+             ↕
+Google Apps Script (API JSON)
+             ↕
+Aplicativo Android (Retrofit/Moshi)
+             ↕
+Banco local Room e telas do app
+~~~
+
+O aplicativo inclui uma URL pública padrão para essa API do Google Apps
+Script. Ela pode ser alterada e testada na tela **Ajustes**. Uma implantação em
+outro ambiente precisa apontar o Apps Script para a planilha correta e informar
+ao app a URL correspondente.
+
+O formato geral retornado na leitura pública é:
 
 ~~~json
 {
