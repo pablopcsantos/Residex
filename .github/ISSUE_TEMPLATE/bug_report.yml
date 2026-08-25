@@ -8,7 +8,8 @@ body:
     attributes:
       label: Residex Version
       options:
-        - 2.1.1 (Latest)
+        - 3.2.4 (Latest)
+        - 2.1.1
         - 1.0.0
     validations:
       required: true

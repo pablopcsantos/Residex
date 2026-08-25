@@ -10,7 +10,7 @@
  *      ↓
  * Google Apps Script
  *      ↓
- * Extensão Chrome
+ * Aplicativo Android
  *
  * O Apps Script funciona como API para:
  *
@@ -82,7 +82,7 @@ function getSpreadsheet_() {
  * GET
  * ============================================================
  *
- * Endpoint utilizado pela extensão Chrome.
+ * Endpoint utilizado pelo aplicativo Android.
  *
  * Exemplos:
  *

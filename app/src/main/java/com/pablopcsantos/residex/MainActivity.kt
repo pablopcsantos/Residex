@@ -1,3 +1,14 @@
+/*
+ * Residex
+ *
+ * Aplicativo Android desenvolvido de forma independente por Pablo Phillipe
+ * Cândido dos Santos para acompanhar processos seletivos de residência médica,
+ * incluindo prazos, etapas e informações sincronizadas.
+ *
+ * Ferramentas de inteligência artificial generativa foram utilizadas como
+ * recurso auxiliar no processo de desenvolvimento.
+ * Currículo Lattes: http://lattes.cnpq.br/9500873674712528
+ */
 package com.pablopcsantos.residex
 
 import android.os.Bundle
