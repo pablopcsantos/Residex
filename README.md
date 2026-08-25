@@ -107,6 +107,10 @@ O formato geral retornado na leitura pública é:
 }
 ~~~
 
+Para criar uma instância completa, desde a importação da planilha no Google
+Drive até a implantação do Apps Script e a configuração do app, consulte o
+[Guia de implantação](docs/GUIA_DE_IMPLANTACAO.md).
+
 ## Segurança e privacidade
 
 - a URL pública da API não contém credenciais administrativas;
